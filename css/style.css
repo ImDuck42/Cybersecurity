@@ -1,0 +1,152 @@
+:root {
+    --background: #0d1117;
+    --dark-accent: #161b22;
+    --text: #c9d1d9;
+    --accent: #58a6ff;
+    --hover: #8e44ad;
+}
+
+@keyframes colorChange {
+    0% { color: #FF5733; }
+    14% { color: #33FF57; }
+    28% { color: #3357FF; }
+    42% { color: #FF33A1; }
+    57% { color: #A133FF; }
+    71% { color: #FFBD33; }
+    85% { color: #33FFBD; }
+    100% { color: #FF5733; }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+#mountain {
+    max-height: 42vh;
+}
+
+#active, #cololololor {
+    animation: colorChange 10s infinite;
+}
+
+#hidden {
+    display: inline-block;
+    color: var(--background);
+}
+
+#hidden:hover {
+    display: inline-block;
+    color: var(--text);
+}
+
+a, nav ul li a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover, nav ul li a:hover {
+    color: var(--hover);
+}
+
+header, footer {
+    background: var(--dark-accent);
+    color: var(--text);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.grid div {
+    background: var(--dark-accent);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.grid div h3 {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: var(--accent);
+    color: var(--background);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background: var(--background);
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--dark-accent);
+    color: var(--text);
+    border: 1px solid var(--text);
+}
+
+table th {
+    background: var(--accent);
+    color: var(--background);
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--text);
+}
+
+table tr:hover {
+    background: var(--background);
+}
+
+.qnl img {
+    border-radius: 5px;
+    max-height: 100px;
+    margin-top: 5% ;
+    margin-right: 100px;
+}
